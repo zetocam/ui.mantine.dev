@@ -10,7 +10,11 @@ import {
 import { useHotkeys } from '@mantine/hooks';
 import rtlPlugin from 'stylis-plugin-rtl';
 
-export const parameters = { layout: 'fullscreen' };
+export const parameters = {
+  // disables snapshotting on a global level
+  chromatic: { disableSnapshot: false },
+  layout: 'fullscreen'
+};
 const rtlCache = createEmotionCache({ key: 'mantine-rtl', stylisPlugins: [rtlPlugin] });
 
 function ThemeWrapper(props: any) {
@@ -33,7 +37,7 @@ function ThemeWrapper(props: any) {
         <Affix position={{ right: rtl ? 'unset' : 0, left: rtl ? 0 : 'unset', bottom: 0 }}>
           <ActionIcon
             onClick={toggleRtl}
-            variant="default"
+            variant="outline"
             style={{
               borderBottom: 0,
               borderRight: 0,
