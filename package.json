@@ -14,7 +14,7 @@
     "_lint": "next lint",
     "_start": "next start -p 9522",
     "_typecheck": "tsc --noEmit",
-    "storybook": "start-storybook -p 6008",
+    "_storybook": "start-storybook -p 6008",
     "storybook:build": "build-storybook",
     "storybook:extract": "npx storybook extract",
     "chromatic": "npx chromatic --project-token=231b4331cc7a -b storybook:build -o ./storybook-static --storybook-config-dir ./.storybook"
